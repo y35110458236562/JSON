@@ -17,7 +17,7 @@ import javabean.Address;
 import javabean.Student;
 //测试git提交
 //测试更新
-public class SampleDemo {
+public class SampleDemo { 
 	
 	public static void demoO() {
 		Map<String,String> map=new HashMap<String, String>();
