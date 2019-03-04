@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 import javabean.Address;
 import javabean.Student;
-
+//≤‚ ‘gitÃ·Ωª
 public class SampleDemo {
 	
 	public static void demoO() {
