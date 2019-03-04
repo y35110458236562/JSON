@@ -15,7 +15,8 @@ import org.json.JSONObject;
 
 import javabean.Address;
 import javabean.Student;
-//²âÊÔgitÌá½»
+//æµ‹è¯•gitæäº¤
+//æµ‹è¯•æ›´æ–°
 public class SampleDemo {
 	
 	public static void demoO() {
@@ -39,14 +40,14 @@ public class SampleDemo {
 		JSONObject json=new JSONObject(JSONstr);
 		System.out.println(json);
 	}
-//	ÎÄ¼ş×ªÎªjson
+//	æ–‡ä»¶è½¬ä¸ºjson
 	public void fileJson() throws IOException {
 //		InputStream in = super.getClass().getClassLoader().getResourceAsStream("per.json");
 //		byte[] bs=new byte[10];
 //		int length=-1;
 //		StringBuffer stringBuffer = new StringBuffer();
 //		while((length=in.read(bs)) !=-1) {
-////		×Ö½ÚÊı×é±ä×Ö·û´®
+////		å­—èŠ‚æ•°ç»„å˜å­—ç¬¦ä¸²
 //			String str=new String(bs,0,length);
 //			stringBuffer.append(str);
 //		}
@@ -59,7 +60,7 @@ public class SampleDemo {
 		JSONObject json=new JSONObject(str);
 		System.out.println(json);
 	}
-//	json¶ÔÏóµ½ÎÄ¼ş
+//	jsonå¯¹è±¡åˆ°æ–‡ä»¶
 	public static void demoF() throws IOException {
 		Map<String,Student> map=new HashMap<String, Student>();
 		Student student1=new Student("zs",23,new Address("xa","bj"));
@@ -73,7 +74,7 @@ public class SampleDemo {
 		json.write(fileWriter);
 		fileWriter.close();
 	}
-//	string->jsonÊı×é
+//	string->jsonæ•°ç»„
 	public static void DemoFi() {
 		String JsonArryStr="[\r\n" + 
 				"	{\"name\":\"zs\",\"age\":23},\r\n" + 
@@ -83,22 +84,22 @@ public class SampleDemo {
 		JSONArray jArry=new JSONArray(JsonArryStr);
 		System.out.println(jArry);
 	}
-//	map->jsonÊı×é
+//	map->jsonæ•°ç»„
 	public static void demoS() {
 		Map<String,String> map=new HashMap<String, String>();
 		map.put("s01", "zs");
 		map.put("s02", "ls");
 		map.put("s03", "ww");
-//		ÓĞÁ½¸ö£¬±ØĞëÌØ¶¨Ò»ÏÂ
+//		æœ‰ä¸¤ä¸ªï¼Œå¿…é¡»ç‰¹å®šä¸€ä¸‹
 		
 		net.sf.json.JSONArray jArray=new net.sf.json.JSONArray();
 		jArray = jArray.fromObject(map);
 		System.out.println(jArray);
 		
 	}
-//	JSONArray×ªmap¶ÔÏó
+//	JSONArrayè½¬mapå¯¹è±¡
 	public static void demoSE() {
-//	×¼±¸JSONArrayÊı¾İ
+//	å‡†å¤‡JSONArrayæ•°æ®
 		String JsonArryStr="[\r\n" + 
 				"	{\"name\":\"zs\",\"age\":23},\r\n" + 
 				"	{\"classname\":\"lq\",\"classno\":1},\r\n" + 
@@ -107,11 +108,11 @@ public class SampleDemo {
 		net.sf.json.JSONArray jArray=new net.sf.json.JSONArray();
 		jArray = jArray.fromObject(JsonArryStr);
 		Map<String,Object> map=new HashMap<String, Object>();
-//		»ñÈ¡Ã¿Ò»¸öjson
+//		è·å–æ¯ä¸€ä¸ªjson
 		for (int i = 0; i < jArray.size(); i++) {
 			net.sf.json.JSONObject Json =(net.sf.json.JSONObject) jArray.get(i);
-//			»ñÈ¡Ã¿Ò»¸öjsonµÄk£¬v
-			Set<String> keys = Json.keySet();//Ã¿¸öjsonµÄËùÓĞkey
+//			è·å–æ¯ä¸€ä¸ªjsonçš„kï¼Œv
+			Set<String> keys = Json.keySet();//æ¯ä¸ªjsonçš„æ‰€æœ‰key
 			for(String key:keys) {
 				Object value=Json.get(key);
 				map.put(key, value);
